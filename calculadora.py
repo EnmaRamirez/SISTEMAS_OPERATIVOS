@@ -10,6 +10,10 @@ def multiplicar(a, b):
 def potencia(a, b):
     return a ** b
 
+def raiz(a):
+    if a < 0:
+        return "ERROR: Raiz de numero negativo"
+    return a ** 0.5
 def dividir(a, b):
     if b == 0:
         return "ERROR: Division entre cero"
@@ -22,7 +26,8 @@ def mostrar_menu():
     print("3. Multiplicar")
     print("4. Dividir")
     print("5. Potencia")
-    print("6. Salir")
+    print("6. Raiz cuadrada")
+    print("7. Salir")
     print("="*30)
 
 def main():
@@ -30,12 +35,15 @@ def main():
         mostrar_menu()
         opcion = input("Selecciona la opcion: ")
 
-        if opcion == '6':
+        if opcion == '7':
             print("¡Hasta luego!")
             break
         try:
-            num1 = float(input("Ingrese el primer numero: "))
-            num2 = float(input("Ingrese el segundo numero: "))
+            if opcion == '6':
+                num1 = float(input("Ingrese el numero: "))
+            else:
+                num1 = float(input("Ingrese el primer numero: "))
+                num2 = float(input("Ingrese el segundo numero: "))
         except ValueError:
             print("Entrada invalida. Intenta de nuevo.")
             continue
@@ -49,6 +57,8 @@ def main():
             print(f"Resultado: {dividir(num1, num2)}")
         elif opcion == '5':
             print(f"Resultado: {potencia(num1, num2)}")
+        elif opcion == '6':
+            print(f"Resultado: {raiz(num1)}")
         else:
             print("Opcion invalida. Intenta de nuevo.")
 
