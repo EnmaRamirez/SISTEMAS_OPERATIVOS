@@ -16,7 +16,7 @@ def potencia(a, b):
     return a ** b
 
 def mostrar_menu():
-    print("\n===CALCULADORA V3===")
+    print("\n===CALCULADORA VERSION 3.0===")
     print("1. Sumar")
     print("2. Restar")
     print("3. Multiplicar")
