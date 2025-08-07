@@ -1,1 +1,1 @@
-def sumar(a, b): return a + bndef restar(a, b): return a - b
+def sumar(a, b): return a + bndef restar(a, b): return a - bndef multiplicar(a, b): return a * b
